@@ -1,0 +1,9 @@
+h1 {text-align: center;}
+.container-fluid{background: url('../images/yellow.webp') no-repeat; width:100%; height: 100vh;}
+.form-container{color: white; padding: 60px 50px; margin-top: 20vh;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+}
+
+/* line 3:border: 0px #fff */
