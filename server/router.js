@@ -3,7 +3,11 @@ const path = require("path");
 
 //Page listener--listening for requests to send a page
 var router = function (app) { 
-    app.get("/", function (req, res) {      
+    app.get("/", function (req, res) {    
+         res.status(200).sendFile(path.join(__dirname + "/../client/login.html"))    //landing page
+     });
+    app.get("/login", function (req, res) {    
+       // console.log("hi");  
         res.status(200).sendFile(path.join(__dirname + "/../client/login.html"))    //landing page
     });
     app.get("/create-account", function (req, res) {
