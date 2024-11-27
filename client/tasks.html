@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/client/js/config.js"></script>
+    <script src='/client/js/tasks.js' async></script>  
+    <link href="/client/css/tasks.css" type="text/css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <main>
+        <section>
+
+            <div style="color:black(248, 254, 255); font-size: 60px;  text-align:center;">Tasks</div>
+           
+                <div class="link-container">
+                    <div class="links">
+                        <a href="/manage-kids">Manage Kids</a>
+                        <a href="/tasks">Tasks</a>
+                        <a href="/shop">Shop</a>
+                        <!-- <a href="/Logout">Logout</a> -->
+                        <!-- <button href="/Logout">Logout</button> -->
+                        <!-- <div class="btnDelete"> -->
+                            <button class="editBtn" id="logout">Logout</button>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            <div style="color:red; font-size: 40px" id="displayChildId">CHILD ID:</div>
+
+                <section class = "onlyParentsContainer">
+
+                    <div >
+                                <div >
+                                    <label for="title">Title:</label>
+                                    <input style="font-size: 25px " id="title" />
+                                </div>
+                                <div>
+                                    <label for="points=">Points:</label>
+                                    <input style="font-size: 25px" id="points" />
+                                </div>
+                                <div>
+                                    <label for="description">Description:</label>
+                                    <input style="font-size: 25px" id="description" />
+                                </div>
+                    
+                                <div class="button-container">
+                                    <div class="button">
+                                        <button class="editBtn" id="add">Add</button>
+                                    </div>
+                                    <div class="button">
+                                        <button class="editBtn" id="clear">Clear</button>
+                                    </div>
+                                </div>
+
+                    </div>
+        
+                </section>
+
+                <div class="containerForAll">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Points</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id='tableBody'></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

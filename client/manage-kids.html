@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Kids</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/client/js/config.js"></script>
+    <script src='/client/js/manage-kids.js' async></script>  
+    <link href="/client/css/manage-kids.css" type="text/css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <main>
+        <section>
+
+            <div style="color:black(248, 254, 255); font-size: 60px;  text-align:center;">Children</div>
+            <div class="link-container">
+                <div class="links">
+                    <a href="/manage-kids">Manage Kids</a>
+                    <a href="/tasks">Tasks</a>
+                    <a href="/shop">Shop</a>
+                    <!-- <a href="/Logout">Logout</a> -->
+                    <!-- <button href="/Logout">Logout</button> -->
+                    <button class="editBtn" id="logout">Logout</button>
+
+                </div>
+
+            </div>
+            <div class="childContainer">
+                <!-- <span class="childId">ChildId</span>
+                <input type="text"> -->
+                <label for="ChildId" id="childId">Child ID:</label>
+                            <input style="font-size: 25px " id="ChildId";  />
+                <button type="button" id="addChild">ADD</button>
+                <div style="color:black; font-size: 40px ; text-align:center">Select Child:</div>
+                <button id = "childrenList"></button>       <!--doing this -->
+            </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

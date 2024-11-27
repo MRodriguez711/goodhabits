@@ -1,3 +1,4 @@
+
 $('#data-submit').click(function () {
     var accountType = $("input[name='accountType']:checked").val();
     console.log("Selected account type:", accountType);
@@ -32,6 +33,10 @@ $('#data-submit').click(function () {
         }
     });
 
+
+
+
+    
     return false;       //just do what i want you to do
 });
 

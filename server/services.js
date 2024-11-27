@@ -19,7 +19,7 @@ var services = function (app) {             //this function is called when the c
             emailAddress: req.body.emailAddress,
             password: req.body.inputPassword       //variable on right matches sql table
         };
-        console.log("Data:", data);
+      //  console.log("Data:", data);
 //console.log(JSON.stringify(data));
     if (req.body.accountType === 'guardian') {
         connection.query("INSERT INTO guardianaccount SET ?", data, function (err) {    
@@ -45,19 +45,21 @@ var services = function (app) {             //this function is called when the c
                 }
             }); 
     }        
-    });
+    });//post
 
-//LOGIN 
+//LOGIN //coming from html values
     app.get('/validate', function (req, res) {       //server name is app?
             const emailAddress = req.query.emailAddress;        //.get-> req.query //dont need to match the names in the SQL Database but the ones in line 45 have to
             const password = req.query.password;    //extracting the password value from the query string in the URL of an incoming request 
-           // console.log("Email:", emailAddress, "Password:", password);
+            const accountType = req.query.accountType;
+            console.log("Email:", emailAddress, "Password:", password, "Account Type:", accountType);
           //if for selecting type of account
+          if (accountType === 'guardian') {
             connection.query(
                 "SELECT * FROM guardianaccount WHERE emailAddress = ? AND password = ?",
                 [emailAddress,password], function(err,results){ //[emailAddress,password] the variables in line 38 & 39
                     if (err) {      //only on server side if theres an error 
-                        //console.log(err);
+                      //  console.log(err);
                         return res.status(200).send(JSON.stringify({ msg: "Error" + err }));
                     }if (results.length > 0){
                         console.log("Login successful for user:", results[0]);      //shows in terminal
@@ -66,9 +68,48 @@ var services = function (app) {             //this function is called when the c
                         return res.status(200).send(JSON.stringify({ msg: "Incorrect Email or Password"})); //shows in web console
                     }
                 }
-            )
-    }); //post
+            ); 
+        }else if (accountType === 'child') {
+            connection.query(
+                "SELECT * FROM childaccount WHERE emailAddress = ? AND password = ?",
+                [emailAddress,password], function(err,results){ //[emailAddress,password] the variables in line 38 & 39
+                    if (err) {      //only on server side if theres an error 
+                        //console.log(err);
+                        return res.status(200).send(JSON.stringify({ msg: "Error" + err }));
+                    }
+                    if (results.length > 0){
+                        console.log("Login successful for user:", results[0]);      //shows in terminal
+                        return res.status(200).send(JSON.stringify({ msg: "SUCCESS", data: results[0] }));
+                    }else{
+                        return res.status(200).send(JSON.stringify({ msg: "Incorrect Email or Password"})); //shows in web console
+                    }
+                }
+            );
+        }
+    }); //get
 
+
+    app.post("/addChild", function (req, res) {
+        var data = {
+         GuardianAccount_idGuardianAccount : req.body.parentId,
+         ChildAccount_idChildAccount: req.body.childId
+        }
+        // console.log('Parent ID:', GuardianAccount_idGuardianAccount);
+        // console.log('Added child ID:', ChildAccount_idChildAccount);
+        console.log("Data:", data);
+
+        connection.query("INSERT INTO guardianaccount_has_childaccount SET ?", data, function (err) {
+            if (err) {
+                return res.status(200).send(JSON.stringify({ msg: "Error" + err }));
+            } else {
+                console.log("Account creation successful");
+                //console.log(results.insertId);
+                return res.status(200).send(JSON.stringify({ msg: "SUCCESS" }));
+            }
+        }); 
+            
+    });
+    
 };  //END VAR SERVICES 
 
 

@@ -1,0 +1,84 @@
+.link-container {
+    color: black;
+    font-size: 30px;
+    width:100%;
+   margin: auto; 
+}
+.link-container {
+    background-color:white;
+    margin:px;
+    padding: 5px; 
+    text-align: center;
+
+}
+.center-div{
+    display: flex;
+    align-items: center; /*not doing anything*/
+    justify-content: center;
+}
+.center-div a{
+    margin-right: 20px;
+}
+.links a{
+padding: 2%;
+color: blue;
+}
+
+.onlyParentsContainer {
+    background-color:gainsboro;
+    margin:30px;
+    margin-left: 40%;
+    padding: 70px; 
+    width:32%;
+    font-size:30px; 
+}
+
+.button-container {
+    margin-left: 45%;
+}
+.editBtn{
+    background-color: blue;
+    color: #FFF;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.button{
+    float: left;
+    width: 35%;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top:20px ;
+}
+
+.onlyParentsContainer input{
+ width: 100%; 
+
+}
+.table > thead > tr > th,
+.table > tbody > tr > td {
+  padding: 10px 25px;
+  line-height: 1.5;
+}
+
+.table thead tr th {
+  font-size: 30px;
+  color: white;
+  text-align:center;
+}
+
+td {
+  color: white;
+  font-size: 30px;
+  text-align:center;
+  margin: auto;
+} 
+.containerForAll{
+    margin-left: 15%;
+    margin-top: 1%;
+}
+
+th{
+    background-color:brown;
+}
