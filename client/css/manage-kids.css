@@ -23,3 +23,29 @@
 padding: 2%;
 color: blue;
 }
+.table > thead > tr > th,
+.table > tbody > tr > td {
+  padding: 10px 25px;
+  line-height: 1.5;
+  /* border: none;
+  vertical-align: middle; */
+}
+
+.table thead tr th {
+  /* padding-top: 15px;
+  padding-bottom: 15px; */
+  font-size: 30px;
+  color: black;
+  text-align:center;
+}
+
+td {
+  color: black;
+  font-size: 30px;
+  text-align:center;
+  margin: auto;
+} 
+
+th{
+    background-color:orange;
+}

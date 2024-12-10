@@ -32,11 +32,27 @@
                         <!-- </div> -->
                     </div>
                 </div>
+
+                <div class="parentContainer">
+                    <!-- <span class="childId">ChildId</span>
+                    <input type="text"> -->
+                    <label for="ChildId" id="childId">Tasks For Child ID:</label>
+                                <input style="font-size: 25px " id="childIdInput";  />
+                    <button type="button" id="viewChild">VIEW</button>
+                    <div style="color:black; font-size: 40px ; text-align:center">ADD TASK</div>
+                  <!-- <button id = "childrenList"></button>  -->      <!--doing this -->
+                </div>
+
             <div style="color:red; font-size: 40px" id="displayChildId">CHILD ID:</div>
 
                 <section class = "onlyParentsContainer">
 
                     <div >
+                                <div >
+                                    <label for="id">Child ID:</label>
+                                    <input style="font-size: 25px " id="id" />
+                                </div>
+
                                 <div >
                                     <label for="title">Title:</label>
                                     <input style="font-size: 25px " id="title" />
@@ -50,9 +66,14 @@
                                     <input style="font-size: 25px" id="description" />
                                 </div>
                     
+                                <div>
+                                    <label for="due">Due:</label>
+                                    <input style="font-size: 25px" id="due" />
+                                </div>
+
                                 <div class="button-container">
                                     <div class="button">
-                                        <button class="editBtn" id="add">Add</button>
+                                        <button class="editBtn" id="addTask">Add</button>
                                     </div>
                                     <div class="button">
                                         <button class="editBtn" id="clear">Clear</button>
@@ -70,8 +91,10 @@
                                 <th>Title</th>
                                 <th>Points</th>
                                 <th>Description</th>
+                                <th>Due</th>
                                 <th>Status</th>
-                                <th></th>
+                                <th id="incomplete"></th>
+                                <th id="delete"></th>
                             </tr>
                         </thead>
                         <tbody id='tableBody'></tbody>

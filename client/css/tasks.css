@@ -69,7 +69,7 @@ color: blue;
 }
 
 td {
-  color: white;
+  color: black;
   font-size: 30px;
   text-align:center;
   margin: auto;
@@ -80,5 +80,5 @@ td {
 }
 
 th{
-    background-color:brown;
+    background-color:orange;
 }

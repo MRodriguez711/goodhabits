@@ -5,11 +5,11 @@
     color:black;
 } */
 h1 {text-align: center;}
-.container-fluid{background: url('../images/yellow.webp') no-repeat; width:100%; height: 100vh;}
+/* .container-fluid{background: url('../images/yellow.webp') no-repeat; width:100%; height: 100vh;} */
 .form-container{color: white; padding: 60px 50px; margin-top: 12vh;
-    -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-    box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.40);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.40);
+    box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.40);
 }
 .radioBtns{text-align: center;font-size: 18px}
 /* line 3:border: 0px #fff */

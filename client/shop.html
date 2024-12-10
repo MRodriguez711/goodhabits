@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/client/js/config.js"></script>
+    <script src='/client/js/shop.js' async></script>  
+    <link href="/client/css/shop.css" type="text/css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <main>
+        <section>
+
+            <div style="color:black(248, 254, 255); font-size: 60px;  text-align:center;">Shop</div>
+           
+                <div class="link-container">
+                    <div class="links">
+                        <a href="/manage-kids">Manage Kids</a>
+                        <a href="/tasks">Tasks</a>
+                        <a href="/shop">Shop</a>
+                            <button class="editBtn" id="logout">Logout</button>
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <div class="parentContainer">
+                    <!-- <span class="childId">ChildId</span>
+                    <input type="text"> -->
+                    <label for="ChildId" id="childId">View Points For Child ID:</label>
+                                <input style="font-size: 25px " id="childIdInput";  />
+                    <button type="button" id="viewChild">VIEW</button>
+                </div>
+
+            <div style="color:red; font-size: 40px" id="displayChildId"></div>  <!--TOTAL POINTS:-->
+            <div style="color:red; font-size: 40px" id="displayChildIdForKids">TOTAL POINTS:</div>  <!--TOTAL POINTS:-->
+            <div style="color:black; font-size: 40px ; text-align:center">Rewards</div>
+
+
+    </main>
+</body>
+
+</html>

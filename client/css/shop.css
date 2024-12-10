@@ -1,0 +1,25 @@
+.link-container {
+    color: black;
+    font-size: 30px;
+    width:100%;
+   margin: auto; 
+}
+.link-container {
+    background-color:white;
+    margin:px;
+    padding: 5px; 
+    text-align: center;
+
+}
+.center-div{
+    display: flex;
+    align-items: center; /*not doing anything*/
+    justify-content: center;
+}
+.center-div a{
+    margin-right: 20px;
+}
+.links a{
+padding: 2%;
+color: blue;
+}

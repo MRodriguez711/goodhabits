@@ -35,13 +35,26 @@
                 <!-- <span class="childId">ChildId</span>
                 <input type="text"> -->
                 <label for="ChildId" id="childId">Child ID:</label>
-                            <input style="font-size: 25px " id="ChildId";  />
+                            <input style="font-size: 25px " id="childIdInput";  />
                 <button type="button" id="addChild">ADD</button>
-                <div style="color:black; font-size: 40px ; text-align:center">Select Child:</div>
-                <button id = "childrenList"></button>       <!--doing this -->
+                <!-- <div style="color:black; font-size: 40px ; text-align:center">Select Child:</div> -->
+              <!-- <button id = "childrenList"></button>  -->      <!--doing this -->
             </div>
 
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th></th> <!--DELETE HEADER-->
+                        </tr>
+                    </thead>
+                    <tbody id='tableBody'></tbody>
+                </table>
             </div>
+
+
         </section>
     </main>
 </body>
