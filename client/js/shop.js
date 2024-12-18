@@ -2,67 +2,69 @@ var userType = localStorage.getItem('userType');
 var userId = localStorage.getItem('userId');
 
 if(userType === 'child'){
-    $('a[href="/manage-kids"]').hide();
-    $('.parentContainer').hide();
+        $('a[href="/manage-kids"]').hide();
+        $('.parentContainer').hide();
 }
 if(userType === 'guardian'){
-    $('#displayChildIdForKids').hide();
+        $('#displayChildIdForKids').hide();
 }
 $('#logout').click(function() {
-    localStorage.clear();
-    window.location.replace("/login");
+        localStorage.clear();
+        window.location.replace("/login");
 });
 
 
 function retrievePoints(){
-    $('#viewChild').click(function() {     
-        var childId = $('#childIdInput').val();
-        $.ajax({
-            url: goodhabitsURL + "/getPoints",
-            type: "get",
-            data: {childId:childId},
+        $('#viewChild').click(function() {     
+            var childId = $('#childIdInput').val();
+            $.ajax({
+                url: goodhabitsURL + "/getPoints",
+                type: "get",
+                data: {childId:childId},
 
-            success: function(response) {
-                var data = JSON.parse(response);
+                success: function(response) {
+                    var data = JSON.parse(response);
 
-                if(data.msg == "SUCCESS"){
-                    $("#displayChildId").text("TOTAL POINTS:" + data.data);
-                    console.log("success");  //----
-                }else{
-                    console.log(data.msg)
+                    if(data.msg == "SUCCESS"){
+                        $("#displayChildId").text("TOTAL POINTS:" + data.data);
+                        //console.log("success");  //----
+                    }else{
+                        //console.log(data.msg)
+                        alert(data.msg);
+                    }
+                },
+                error: function(err){
+                    console.log(err);
                 }
-            },
-            error: function(err){
-                console.log(err);
-            }
-        });
-    })
+            });
+        })
 }
 
 function retrievePointsForKids(){
-    var userId =  localStorage.getItem('userId');
-    var userType = localStorage.getItem('userType');
+        var userId =  localStorage.getItem('userId');
+        var userType = localStorage.getItem('userType');
 
-        $.ajax({
-            url: goodhabitsURL + "/getPointsForKids",
-            type: "get",
-            data: {userId:userId,
-                userType:userType 
-            },
+            $.ajax({
+                url: goodhabitsURL + "/getPointsForKids",
+                type: "get",
+                data: {userId:userId,
+                    userType:userType 
+                },
 
-            success: function(response) {
-                var data = JSON.parse(response);
+                success: function(response) {
+                    var data = JSON.parse(response);
 
-                if(data.msg == "SUCCESS"){
-                    $("#displayChildIdForKids").append(data.data);
-                }else{
-                    console.log(data.msg)
+                    if(data.msg == "SUCCESS"){
+                        $("#displayChildIdForKids").append(data.data);
+                    }else{
+                        //--console.log(data.msg)
+                        alert(data.msg);
+                    }
+                },
+                error: function(err){
+                    console.log(err);
                 }
-            },
-            error: function(err){
-                console.log(err);
-            }
-        });
+            });
 }
 
 retrievePoints();

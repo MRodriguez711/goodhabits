@@ -1,61 +1,106 @@
 .link-container {
-    color: black;
+    /* color: black; */
+    display: flex;
+    flex-direction: column;
     font-size: 30px;
     width:100%;
-   margin: auto; 
+   /* margin: auto;  */
 }
 .link-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     background-color:white;
-    margin:px;
-    padding: 5px; 
-    text-align: center;
+    /* margin:px; */
+    padding: 10px; 
+    /* text-align: center; */
 
 }
 .center-div{
     display: flex;
-    align-items: center; /*not doing anything*/
-    justify-content: center;
+    /* align-items: center; not doing anything */
+    /* justify-content: center; */
 }
 .center-div a{
     margin-right: 20px;
 }
 .links a{
 padding: 2%;
-color: blue;
+/* color: blue; */
+text-decoration:none; color: black; 
+    
 }
 
-.onlyParentsContainer {
+.links a:hover{
+    color:orange;
+}
+/* 
+.links a:active{
+    background-color:#C1E1C1;
+} */
+
+.links a.clicked {
+    background-color: #C1E1C1;
+}
+
+
+.onlyParentsContainer { 
+    display: flex;
+    flex-direction: column;
+    /* justify-content: right; */
+    align-items: center;
     background-color:gainsboro;
-    margin:30px;
-    margin-left: 40%;
-    padding: 70px; 
-    width:32%;
+    /* margin-left: 0px;
+    margin-right: 0px; */
+    /* padding: 0px;  */
+    /* width:32%; */
     font-size:30px; 
 }
 
 .button-container {
-    margin-left: 45%;
+    display: flex;
+    flex-direction:row;
+    /* margin-left: 45%; */
+    align-items: center;
+    justify-content: center;
 }
 .editBtn{
+    display: flex;
     background-color: blue;
+    justify-content:left;
     color: #FFF;
     padding: 10px 10px;
     font-size: 16px;
     border-radius: 10px;
 }
+.deleteBtn{
+    /* display: flex; */
+    background-color: rgb(208, 15, 15);
+    color: #FFF;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-left: 60%;
+}
+
 
 .button{
-    float: left;
-    width: 35%;
-    margin-right: 10px;
-    margin-left: 10px;
+    display: flex;
+    /* flex-direction:row; */
+    /* float: left; */
+    /* width: 25%; */
+    /* margin-right: 10px; */
+    /* margin-left: 10px; */
     padding-top:20px ;
+    padding-bottom: 20px;
+    /* align-self: center; */
+    gap: 60px;
 }
 
 .onlyParentsContainer input{
  width: 100%; 
-
 }
+
 .table > thead > tr > th,
 .table > tbody > tr > td {
   padding: 10px 25px;
@@ -75,10 +120,21 @@ td {
   margin: auto;
 } 
 .containerForAll{
-    margin-left: 15%;
-    margin-top: 1%;
+    display: flex;
+    /* align-items: center; */
+    /* margin-left: 15%;*/
+    margin-top: 50px; 
+    margin-bottom: 30%;
+    justify-content: center;
 }
 
 th{
     background-color:orange;
 }
+
+.innerOnlyParentsContainer{
+    align-content: center;
+}
+
+
+/* .onlyParentsContainer + .containerForAll */

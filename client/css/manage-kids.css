@@ -1,28 +1,63 @@
 .link-container {
-    color: black;
-    font-size: 30px;
-    width:100%;
-   margin: auto; 
+  /* color: black; */
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  width:100%;
+ /* margin: auto;  */
 }
 .link-container {
-    background-color:white;
-    margin:px;
-    padding: 5px; 
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color:white;
+  /* margin:px; */
+  padding: 10px; 
+  padding-bottom: 30px;
+  /* text-align: center; */
 
 }
 .center-div{
-    display: flex;
-    align-items: center; /*not doing anything*/
-    justify-content: center;
+  display: flex;
+  /* align-items: center; not doing anything */
+  /* justify-content: center; */
 }
 .center-div a{
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .links a{
 padding: 2%;
-color: blue;
+/* color: blue; */
+text-decoration:none; color: black; 
+  
 }
+
+
+.links a:hover{
+  color:orange;
+}
+/* 
+.links a:active{
+  background-color:#C1E1C1;
+} */
+
+.links a.clicked {
+  background-color: #C1E1C1;
+}
+
+.deleteBtn{
+  /* display: flex; */
+  background-color: rgb(208, 15, 15);
+  color: #FFF;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-left: 60%;
+}
+
+
+
+
 .table > thead > tr > th,
 .table > tbody > tr > td {
   padding: 10px 25px;
@@ -48,4 +83,13 @@ td {
 
 th{
     background-color:orange;
+}
+
+.table-container{
+  display: flex;
+  /* align-items: center; */
+  /* margin-left: 15%;*/
+  margin-top: 50px; 
+  margin-bottom: 30%;
+  justify-content: center;
 }

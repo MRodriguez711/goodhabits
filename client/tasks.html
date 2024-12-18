@@ -18,7 +18,7 @@
     <main>
         <section>
 
-            <div style="color:black(248, 254, 255); font-size: 60px;  text-align:center;">Tasks</div>
+            <!-- <div style="color:black(248, 254, 255); font-size: 60px;  text-align:center;">Tasks</div> -->
            
                 <div class="link-container">
                     <div class="links">
@@ -28,26 +28,31 @@
                         <!-- <a href="/Logout">Logout</a> -->
                         <!-- <button href="/Logout">Logout</button> -->
                         <!-- <div class="btnDelete"> -->
-                            <button class="editBtn" id="logout">Logout</button>
                         <!-- </div> -->
+                            <button class="deleteBtn" id="logout">Logout</button>
                     </div>
+                                         
+
                 </div>
 
-                <div class="parentContainer">
+                <div class="parentContainer" style="font-weight: bold; padding-bottom: 50px;font-size:30px; padding-top: 30px;">
                     <!-- <span class="childId">ChildId</span>
                     <input type="text"> -->
-                    <label for="ChildId" id="childId">Tasks For Child ID:</label>
-                                <input style="font-size: 25px " id="childIdInput";  />
+                    <label for="ChildId" id="childId">View Tasks For Child ID:</label>
+                                <input style="font-size: 25px " id="childIdInput" />
                     <button type="button" id="viewChild">VIEW</button>
-                    <div style="color:black; font-size: 40px ; text-align:center">ADD TASK</div>
+                    <!-- <div id="addTask" style="color:black; font-size: 40px ; text-align:center">ADD TASK</div> -->
                   <!-- <button id = "childrenList"></button>  -->      <!--doing this -->
                 </div>
 
-            <div style="color:red; font-size: 40px" id="displayChildId">CHILD ID:</div>
+            <div style="color:red; font-size: 40px; font-weight: bold; padding-top: 20px;" id="displayChildId">CHILD ID:</div>
 
                 <section class = "onlyParentsContainer">
 
-                    <div >
+                    <div class = "innerOnlyParentsContainer" >
+                        <div style="text-align: center; font-weight: bold; padding-bottom: 50px;font-size: larger; padding-top: 20px; color:black;">
+                            <label for="addTaskTitle" >ADD TASK</label>
+                        </div>    
                                 <div >
                                     <label for="id">Child ID:</label>
                                     <input style="font-size: 25px " id="id" />
@@ -58,7 +63,7 @@
                                     <input style="font-size: 25px " id="title" />
                                 </div>
                                 <div>
-                                    <label for="points=">Points:</label>
+                                    <label for="points">Points:</label>
                                     <input style="font-size: 25px" id="points" />
                                 </div>
                                 <div>
@@ -74,8 +79,8 @@
                                 <div class="button-container">
                                     <div class="button">
                                         <button class="editBtn" id="addTask">Add</button>
-                                    </div>
-                                    <div class="button">
+                                    <!-- </div>
+                                    <div class="button"> -->
                                         <button class="editBtn" id="clear">Clear</button>
                                     </div>
                                 </div>
@@ -84,8 +89,8 @@
         
                 </section>
 
-                <div class="containerForAll">
-                    <table class="table">
+                <div class="containerForAll" >
+                    <table class="table" >
                         <thead>
                             <tr>
                                 <th>Title</th>

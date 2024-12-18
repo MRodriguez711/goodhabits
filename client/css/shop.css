@@ -1,25 +1,53 @@
 .link-container {
-    color: black;
+    /* color: black; */
+    display: flex;
+    flex-direction: column;
     font-size: 30px;
     width:100%;
-   margin: auto; 
+   /* margin: auto;  */
 }
 .link-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     background-color:white;
-    margin:px;
-    padding: 5px; 
-    text-align: center;
+    /* margin:px; */
+    padding: 10px; 
+    /* text-align: center; */
 
 }
 .center-div{
     display: flex;
-    align-items: center; /*not doing anything*/
-    justify-content: center;
+    /* align-items: center; not doing anything */
+    /* justify-content: center; */
 }
 .center-div a{
     margin-right: 20px;
 }
 .links a{
 padding: 2%;
-color: blue;
+/* color: blue; */
+text-decoration:none; color: black; 
+    
+}
+
+.links a:hover{
+    color:orange;
+}
+/* 
+.links a:active{
+    background-color:#C1E1C1;
+} */
+
+.links a.clicked {
+    background-color: #C1E1C1;
+}
+.deleteBtn{
+    /* display: flex; */
+    background-color: rgb(208, 15, 15);
+    color: #FFF;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-left: 60%;
 }
